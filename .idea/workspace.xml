@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Fonctions requises : lire_portfolio_csv, lire_portfolio_json, afficher_portfolio">
-      <change beforePath="$PROJECT_DIR$/portfolio_actual_prices_sample.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio_sample.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio_sample.json" beforeDir="false" />
+    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Reorganisation emplacement fichiers et debugging">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_loader.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +53,12 @@
     "git-widget-placeholder": "main"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/.venv" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -77,11 +82,20 @@
       <option name="project" value="LOCAL" />
       <updated>1757333928423</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Reorganisation emplacement fichiers et debugging">
+      <option name="closed" value="true" />
+      <created>1757334407024</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1757334407024</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fonctions requises : lire_portfolio_csv, lire_portfolio_json, afficher_portfolio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fonctions requises : lire_portfolio_csv, lire_portfolio_json, afficher_portfolio" />
+    <MESSAGE value="Reorganisation emplacement fichiers et debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reorganisation emplacement fichiers et debugging" />
   </component>
 </project>

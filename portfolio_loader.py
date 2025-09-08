@@ -50,7 +50,7 @@ def afficher_portfolio(portfolio):
         print("Le portfolio est vide.")
         return
 
-    print(f"{'Symbole':<6} {'Quantité':<8} {'Prix (€)':<10} {'Valeur (€)':<12} {'Date achat':<12}") # Entêtes < alignées à gauche avec nb de caractères
+    print(f"{'Symbole':<6} {'Quantité':<8} {'Prix (€)':<10} {'Date achat':<12} {'Valeur (€)':<12}") # Entêtes < alignées à gauche avec nb de caractères
     print("-" * 40) # crée une ligne de 40 tirets
 
     valeur_totale = 0
@@ -63,12 +63,44 @@ def afficher_portfolio(portfolio):
         valeur_totale += valeur
 
         # Affichage avec alignement
-        print(f"{symbole:<6} {quantite:<8} {prix:<10.2f} {valeur:<12.2f} {date_achat:<12}") # 2f formate le nombre avec 2 décimales
+        print(f"{symbole:<6} {quantite:<8} {prix:<10.2f} {date_achat:<12} {valeur:<12.2f}") # 2f formate le nombre avec 2 décimales
 
     print("-" * 40)
     print(f"{'Valeur totale du portfolio (€)':<46}: {valeur_totale:.2f}")
 
-# Exemple d'utilisation
+
+def sauvegarder_portfolio(portfolio, nom_fichier):
+    """
+        Sauvegarde le portfolio dans un fichier JSON.
+        Le portfolio doit être une liste de dictionnaires avec les clés :
+        'symbol', 'quantity', 'price', 'purchase_date' (facultatif)
+    """
+    try:
+        data_to_save = { # prépare les données à sauvegarder
+            "positions": portfolio
+        }
+
+        with open(nom_fichier, 'w', encoding='utf-8') as file: # écriture dans le fichier
+           json.dump(data_to_save, file, ensure_ascii=False, indent=4)
+           # dump transforme la liste de dictionnaires portfolio en JSON / ascii False conserve les caractères spéciaux / indentation
+
+        print(f"\nPortfolio sauvegardé avec succès dans '{nom_fichier}'.")
+
+    except Exception as e:
+        print(f"\nErreur lors de la sauvegarde du portfolio : {e}")
+
+def chercher_par_symbole(portfolio, symbole):
+    """
+        Retourne le dictionnaire de la position si trouvé, sinon None.
+        La recherche est insensible à la casse.
+    """
+    symbole = symbole.upper() # normalise pour ignorer la casse
+    for position in portfolio:
+        if position.get('symbol', '').upper() == symbole:
+            return position
+        return None
+
+# Exemples d'utilisation
 if __name__ == "__main__":
     portfolio_csv = lire_portfolio_csv('portfolio_sample.csv')
     print("\nPortfolio chargé depuis CSV :")
@@ -77,3 +109,11 @@ if __name__ == "__main__":
     portfolio_json = lire_portfolio_json('portfolio_sample.json')
     print("\nPortfolio chargé depuis JSON :")
     afficher_portfolio(portfolio_json)
+
+    sauvegarder_portfolio(portfolio_json, 'portfolio_updated.json')
+
+    position = chercher_par_symbole(portfolio_json, "AAPL")
+    if position:
+        print("\nPosition trouvée :", position)
+    else:
+        print("\nSymbole non trouvé dans le portfolio.")
