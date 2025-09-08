@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Portfolio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Fonctions requises : lire_portfolio_csv, lire_portfolio_json, afficher_portfolio">
+      <change beforePath="$PROJECT_DIR$/portfolio_actual_prices_sample.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio_sample.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio_sample.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +47,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.portfolio_loader.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -68,6 +69,19 @@
       <option name="presentableId" value="Default" />
       <updated>1757324285976</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fonctions requises : lire_portfolio_csv, lire_portfolio_json, afficher_portfolio">
+      <option name="closed" value="true" />
+      <created>1757333928423</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1757333928423</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fonctions requises : lire_portfolio_csv, lire_portfolio_json, afficher_portfolio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fonctions requises : lire_portfolio_csv, lire_portfolio_json, afficher_portfolio" />
   </component>
 </project>
