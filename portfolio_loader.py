@@ -1,45 +1,88 @@
 import csv
 import json
 
-def lire_portfolio_csv(portfolio_sample):
+def lire_portfolio_csv(nom_fichier):
     """ Charge le portfolio depuis un fichier CSV avec colonnes """
     portfolio = []
     try:
-        with open(portfolio_sample, mode='r', encoding='utf-8') as file:
+        with open(nom_fichier, mode='r', encoding='utf-8') as file:
             reader = csv.DictReader(file)
-            for ligne in reader:
-                position = {
-                    'symbol': ligne.get('symbol', 'N/A'),
-                    'quantity': int(ligne.get('quantity', 0)),
-                    'purchase_price': float(ligne.get('purchase_price', 0.0)),
-                    'purchase_date': ligne.get('purchase_date', 'N/A')
-                }
-                portfolio.append(position)
+            for i, ligne in enumerate(reader, start=1):
+                try: # récupération des champs
+                    symbol = ligne.get('symbol', '').strip().upper()
+                    quantity = int(ligne.get('quantity', 0))
+                    purchase_price = float(ligne.get('purchase_price', 0.0))
+                    purchase_date = ligne.get('purchase_date', 'N/A').strip()
+
+                    if not symbol:
+                        raise ValueError("Symbole manquant")
+                    if quantity <= 0:
+                        raise ValueError("Quantité doit être positive")
+                    if purchase_price <= 0:
+                        raise ValueError("Prix doit être positif")
+                    if purchase_date == '' or purchase_date.lower() == 'n/a':
+                        raise ValueError("Date d'achat manquante")
+
+                    position = { # si tout est bon, on ajoute la position
+                        'symbol': symbol,
+                        'quantity': quantity,
+                        'purchase_price': purchase_price,
+                        'purchase_date': purchase_date
+                    }
+                    portfolio.append(position)
+
+                except ValueError as ve:
+                    print(f"[Ligne {i}] Données invalides : {ve} -> ignorée")
+                except Exception as e:
+                    print(f"[Ligne {i}] Erreur inattendue : {e} -> ignorée")
+
     except FileNotFoundError:
-        print(f"Erreur : le fichier {portfolio_sample} n'a pas été trouvé.")
+        print(f"Erreur : le fichier {nom_fichier} n'a pas été trouvé.")
     except Exception as e:
         print(f"Erreur lors de la lecture du CSV : {e}")
     return portfolio
 
-def lire_portfolio_json(portfolio_sample):
+def lire_portfolio_json(nom_fichier):
     """ Charge le portfolio depuis un fichier JSON avec métadonnées """
     portfolio = []
     try:
-        with open(portfolio_sample, mode='r', encoding='utf-8') as file:
+        with open(nom_fichier, mode='r', encoding='utf-8') as file:
             data = json.load(file)
+
             positions = data.get('positions', [])
-            for pos in positions:
-                position = {
-                    'symbol': pos.get('symbol'),
-                    'quantity': pos.get('quantity', 0),
-                    'purchase_price': pos.get('purchase_price', 0.0),
-                    'purchase_date': pos.get('purchase_date')
-                }
-                portfolio.append(position)
+            for i, pos in enumerate(positions, start=1):
+                try:
+                    symbol = str(pos.get('symbol', '')).strip().upper()
+                    quantity = int(pos.get('quantity', 0))
+                    purchase_price = float(pos.get('purchase_price', 0.0))
+                    purchase_date = str(pos.get('purchase_date', 'N/A')).strip()
+
+                    if not symbol:
+                        raise ValueError("Symbole manquant")
+                    if quantity <= 0:
+                        raise ValueError("Quantité doit être positive")
+                    if purchase_price <= 0:
+                        raise ValueError("Prix doit être positif")
+                    if purchase_date == '' or purchase_date.lower() == 'n/a':
+                        raise ValueError("Date d'achat manquante")
+
+                    position = {
+                    'symbol': symbol,
+                    'quantity': quantity,
+                    'purchase_price': purchase_price,
+                    'purchase_date': purchase_date
+                    }
+                    portfolio.append(position)
+
+                except ValueError as ve:
+                    print(f"[Position {i}] Données invalides : {ve} -> ignorée")
+                except Exception as e:
+                    print(f"[Position {i}] Erreur inattendue : {e} -> ignorée")
+
     except FileNotFoundError:
-        print(f"Erreur : le fichier {portfolio_sample} n'a pas été trouvé.")
+        print(f"Erreur : le fichier {nom_fichier} n'a pas été trouvé.")
     except json.JSONDecodeError:
-        print(f"Erreur : le fichier {portfolio_sample} n'est pas un JSON valide.")
+        print(f"Erreur : le fichier {nom_fichier} n'est pas un JSON valide.")
     except Exception as e:
         print(f"Erreur lors de la lecture du JSON : {e}")
     return portfolio
