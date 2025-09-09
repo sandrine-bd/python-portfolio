@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Validation des données lors du chargement">
-      <change afterPath="$PROJECT_DIR$/portfolio_structures.py" afterDir="false" />
+    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Création portfolio_structures.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio_structures.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_structures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio_updated.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_updated.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757340799777</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Création portfolio_structures.py">
+      <option name="closed" value="true" />
+      <created>1757411825504</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1757411825504</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -115,6 +125,7 @@
     <MESSAGE value="Reorganisation emplacement fichiers et debugging" />
     <MESSAGE value="Fonctions sauvegarder_portfolio et chercher_par_symbole" />
     <MESSAGE value="Validation des données lors du chargement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validation des données lors du chargement" />
+    <MESSAGE value="Création portfolio_structures.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Création portfolio_structures.py" />
   </component>
 </project>

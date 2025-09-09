@@ -2,8 +2,8 @@ import csv
 from collections import namedtuple
 
 # Structures de données immuables
-Position = namedtuple("Position", ["symbol, quantity, purchase_price, purchase_date"])
-Transaction = namedtuple("Transaction", ["date, symbol, quantity, price, type"])
+Position = namedtuple("Position", ["symbol", "quantity", "purchase_price", "purchase_date"])
+Transaction = namedtuple("Transaction", ["date", "symbol", "quantity", "price", "type"])
 
 # Conversion des données : une liste de dictionnaires (CSV/JSON) en liste de namedtuples
 def convertir_vers_positions(portfolio_dict):
@@ -55,9 +55,3 @@ class Portfolio:
 
     def afficher(self):
         afficher_positions(self.positions)
-
-# Exemples d'utilisation
-if __name__ == "__main__":
-    portfolio_dict = [
-
-    ]
