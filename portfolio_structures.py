@@ -1,4 +1,3 @@
-import csv
 from collections import namedtuple
 
 # Structures de données immuables

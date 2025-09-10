@@ -14,7 +14,7 @@ rendement_pourcent = lambda position, prix_actuel: (
 )
 
 # Poids d'une position dans le portfolio (en %)
-poids_position = lambda position, prix_actuel, total_portfolio: (
+poids_portfolio = lambda position, prix_actuel, total_portfolio: (
     (valeur_actuelle(position, prix_actuel) / float(total_portfolio)) * 100
     if float(position.purchase_price) > 0 else 0.0
 )
