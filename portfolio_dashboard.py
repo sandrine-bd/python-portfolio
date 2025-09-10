@@ -4,6 +4,10 @@ from portfolio_calculs import (
     valeur_position, valeur_actuelle, gain_absolu, rendement_pourcent, poids_portfolio,
     dividendes_annuels, frais_courtage
 )
+from portfolio_map import (
+    calculer_valeurs_positions, calculer_gains_portfolio, calculer_rendements_portfolio,
+    generer_rapport_complet
+)
 
 def main():
     portfolio_csv = lire_portfolio_csv("portfolio_sample.csv") # charge le portfolio initial
@@ -18,7 +22,7 @@ def main():
 
     prix_actuels = lire_prix_actuels_csv("portfolio_actual_prices_sample.csv") # charge les prix actuels
 
-    total_actuel = sum(
+    total_actuel = sum( # valeur totale actuelle du portefeuille
         valeur_actuelle(pos, prix_actuels[pos.symbol])
         for pos in portfolio_csv if pos.symbol in prix_actuels
     )
@@ -33,7 +37,7 @@ def main():
         "TSLA": 0.0,
     }
 
-    print("\n--- Tableau récapitulatif ---")
+    print("\n--- Tableau récapitulatif (calculs unitaires via Lambda) ---")
     for pos in portfolio_csv:
         if pos.symbol in prix_actuels:
             prix_actuel = prix_actuels[pos.symbol]
@@ -53,6 +57,21 @@ def main():
                   f"Valeur actuelle : {val_now:.2f}€ | "
                   f"Dividendes annuels : {div:.2f}€ | "
                   f"Frais de courtage (vente) : {frais:.2f}€")
+
+    # Exemple avec map() : rapport global
+    print("\n--- Rapport complet (via map) ---")
+    valeurs = calculer_valeurs_positions(portfolio_csv)
+    gains = calculer_gains_portfolio(portfolio_csv, prix_actuels)
+    rendements = calculer_rendements_portfolio(portfolio_csv, prix_actuels)
+    rapport = generer_rapport_complet(portfolio_csv, prix_actuels)
+
+    print("Valeurs initiales :", valeurs)
+    print("Gains absolus :", gains)
+    print("Rendements % :", rendements)
+
+    print("\n--- Rapport détaillé ---")
+    for ligne in rapport:
+        print(ligne)
 
 if __name__ == "__main__":
     main()
