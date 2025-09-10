@@ -1,7 +1,7 @@
 import csv
 import json
 
-from portfolio_structures import Portfolio, convertir_vers_positions, afficher_positions
+from portfolio_structures import convertir_vers_positions, afficher_positions
 
 def lire_portfolio_csv(nom_fichier):
     """ Charge le portfolio depuis un fichier CSV avec colonnes """

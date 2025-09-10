@@ -1,7 +1,8 @@
 from portfolio_loader import lire_portfolio_csv, afficher_portfolio, chercher_par_symbole
 from portfolio_prices_loader import lire_prix_actuels_csv
 from portfolio_calculs import (
-    valeur_position, valeur_actuelle, gain_absolu, rendement_pourcent, poids_portfolio
+    valeur_position, valeur_actuelle, gain_absolu, rendement_pourcent, poids_portfolio,
+    dividendes_annuels, frais_courtage
 )
 
 def main():
@@ -22,6 +23,16 @@ def main():
         for pos in portfolio_csv if pos.symbol in prix_actuels
     )
 
+    dividende_par_action = {
+        "AAPL": 1.04,
+        "GOOGL": 0.84,
+        "MSFT": 3.32,
+        "NVDA": 0.04,
+        "META": 2.10,
+        "AMZN": 0.0,
+        "TSLA": 0.0,
+    }
+
     print("\n--- Tableau récapitulatif ---")
     for pos in portfolio_csv:
         if pos.symbol in prix_actuels:
@@ -31,12 +42,17 @@ def main():
             gain = gain_absolu(pos, prix_actuel)
             rendement = rendement_pourcent(pos, prix_actuel)
             poids = poids_portfolio(pos, prix_actuel, total_actuel)
+            div = dividendes_annuels(pos, dividende_par_action.get(pos.symbol, 0))
+            frais = frais_courtage(val_now)
 
             print(f"{pos.symbol:<6} | Achat : {val_init:>8.2f} | "
                   f"Actuel : {val_now:>8.2f}€ | "
                   f"Gain: {gain:+8.2f}€ | "
                   f"Rendement: {rendement:+6.2f}% | "
-                  f"Poids: {poids:5.2f}%")
+                  f"Poids: {poids:5.2f}% | "
+                  f"Valeur actuelle : {val_now:.2f}€ | "
+                  f"Dividendes annuels : {div:.2f}€ | "
+                  f"Frais de courtage (vente) : {frais:.2f}€")
 
 if __name__ == "__main__":
     main()

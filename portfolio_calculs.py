@@ -18,3 +18,9 @@ poids_portfolio = lambda position, prix_actuel, total_portfolio: (
     (valeur_actuelle(position, prix_actuel) / float(total_portfolio)) * 100
     if float(position.purchase_price) > 0 else 0.0
 )
+
+# Dividendes annuels (en €)
+dividendes_annuels = lambda position, dividende_par_action: float(position.quantity) * float(dividende_par_action)
+
+# Frais de courtage (0.1% du montant)
+frais_courtage = lambda montant: float(montant) * 0.001
