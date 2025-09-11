@@ -22,6 +22,34 @@ class Portfolio:
         """Nombre de positions dans le portfolio"""
         return len(self.positions)
 
+    def __getitem__(self, key):
+        """Pour accéder aux positions comme dans une liste ou un dict"""
+        if isinstance(key, int):
+            return self.positions[key]
+        elif isinstance(key, str):
+            return self.obtenir_position(key)
+        raise TypeError("L'index doit être un entier ou un symbole d'action")
+
+    def __iter__(self):
+        """Pour parcourir le portfolio avec une boucle for"""
+        return iter(self.positions)
+
+    def __contains__(self, symbol):
+        """Pour utiliser 'in'"""
+        return any(pos.symbol == symbol.upper() for pos in self.positions)
+
+    def __eq__(self, other):
+        """Pour comparer deux portfolios"""
+        if not isinstance(other, Portfolio):
+            return False
+        return set(self.positions) == set(other.positions)
+
+    def __add__(self, other):
+        """Pour fusionner deux portfolios"""
+        if not isinstance(other, Portfolio):
+            raise TypeError("On ne peut additionner qu'avec un autre Portfolio")
+        return Portfolio(self.positions + other.positions)
+
     def calculer_valeur_totale(self, prix_actuels=None):
         """Si prix_actuels=None : valeur d'achat initiale, sinon : valeur de marché actuelle"""
         if prix_actuels is None:

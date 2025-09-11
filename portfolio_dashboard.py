@@ -45,5 +45,17 @@ def main():
         f"Rendement global : {perf_globale['rendement_portfolio_%']:+.2f}%"
     )
 
+    # __getitem__
+    portfolio[0]
+    portfolio["AAPL"]
+
+    # __iter__
+    for pos in portfolio:
+        print(pos.symbol, pos.quantity)
+
+    # __contains__
+    if "TSLA" in portfolio:
+        print("Tesla est dans le portfolio")
+
 if __name__ == "__main__":
     main()
