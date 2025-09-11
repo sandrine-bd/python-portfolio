@@ -6,23 +6,25 @@ from portfolio_calculs import (
 )
 from portfolio_map import (
     calculer_valeurs_positions, calculer_gains_portfolio, calculer_rendements_portfolio,
-    generer_rapport_complet
+    generer_rapport_complet, convertir_prix_usd_en_eur, positions_gagnates, appliquer_calculs
 )
 
 def main():
-    portfolio_csv = lire_portfolio_csv("portfolio_sample.csv") # charge le portfolio initial
+    # Charge le portfolio initial
+    portfolio_csv = lire_portfolio_csv("portfolio_sample.csv")
     print("\nPortfolio chargé depuis CSV :")
     afficher_portfolio(portfolio_csv)
 
-    position = chercher_par_symbole(portfolio_csv, "AAPL") # test de la recherche
+    # Recherche par symbole
+    position = chercher_par_symbole(portfolio_csv, "AAPL")
     if position:
         print("\nPosition trouvée :", position)
     else:
         print("\nSymbole non trouvé dans le portfolio.")
 
-    prix_actuels = lire_prix_actuels_csv("portfolio_actual_prices_sample.csv") # charge les prix actuels
-
-    total_actuel = sum( # valeur totale actuelle du portefeuille
+    # Valeur totale actuelle du portefeuille
+    prix_actuels = lire_prix_actuels_csv("portfolio_actual_prices_sample.csv")
+    total_actuel = sum(
         valeur_actuelle(pos, prix_actuels[pos.symbol])
         for pos in portfolio_csv if pos.symbol in prix_actuels
     )
@@ -58,7 +60,6 @@ def main():
                   f"Dividendes annuels : {div:.2f}€ | "
                   f"Frais de courtage (vente) : {frais:.2f}€")
 
-    # Exemple avec map() : rapport global
     print("\n--- Rapport complet (via map) ---")
     valeurs = calculer_valeurs_positions(portfolio_csv)
     gains = calculer_gains_portfolio(portfolio_csv, prix_actuels)
@@ -72,6 +73,17 @@ def main():
     print("\n--- Rapport détaillé ---")
     for ligne in rapport:
         print(ligne)
+
+    # Conversion USD -> EUR
+    prix_usd = lire_prix_actuels_csv("portfolio_actual_prices_sample.csv")
+    prix_eur = convertir_prix_usd_en_eur(prix_usd, taux=0.92)
+    print("\nPrix actuels convertis en EUR :", prix_eur)
+
+    # Filtre seulement les positions gagnantes
+    gagnantes = positions_gagnates(portfolio_csv, prix_eur)
+    print("\nPositions gagnates :")
+    for pos in gagnantes:
+        print(pos)
 
 if __name__ == "__main__":
     main()

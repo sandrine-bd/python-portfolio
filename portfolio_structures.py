@@ -37,7 +37,7 @@ def afficher_positions(positions):
             f"à {pos.purchase_price:>8.2f}€ "
             f"(Date d'achat: {pos.purchase_date}) -> Valeur : {valeur:>10.2f}€"
         )
-        print(f"\nValeur totale estimée : {total:.2f}€\n")
+        print(f"Valeur totale estimée : {total:.2f}€\n")
 
 class Portfolio:
     def __init__(self, positions=None):

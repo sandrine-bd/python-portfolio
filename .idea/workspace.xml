@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Adaptation portfolio_loader.py">
-      <change afterPath="$PROJECT_DIR$/portfolio_exceptions.py" afterDir="false" />
+    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Ajout fonctions optionnelles avec map()">
+      <change beforePath="$PROJECT_DIR$/portfolio_dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_dashboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_map.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio_structures.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_structures.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757574757284</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Ajout fonctions optionnelles avec map()">
+      <option name="closed" value="true" />
+      <created>1757581687769</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1757581687769</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -145,6 +154,7 @@
     <MESSAGE value="Validation des données lors du chargement" />
     <MESSAGE value="Création portfolio_structures.py" />
     <MESSAGE value="Adaptation portfolio_loader.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adaptation portfolio_loader.py" />
+    <MESSAGE value="Ajout fonctions optionnelles avec map()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout fonctions optionnelles avec map()" />
   </component>
 </project>

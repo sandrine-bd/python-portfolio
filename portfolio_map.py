@@ -52,15 +52,3 @@ def convertir_prix_usd_en_eur(prix_actuels_dict, taux=0.92):
         lambda item: (item[0], item[1] * taux),
         prix_actuels_dict.items()
     ))
-
-def appliquer_calculs(positions, prix_actuels_dict):
-    """Applique plusieurs calculs en une seule passe avec map()"""
-    return list(map(
-        lambda pos: {
-            "symbol": pos.symbol,
-            "valeur_actuelle": valeur_actuelle(pos, prix_actuels_dict.get(pos.symbol, 0.0)),
-            "gain": gain_absolu(pos, prix_actuels_dict.get(pos.symbol, 0.0)),
-            "rendement_%": rendement_pourcent(pos, prix_actuels_dict.get(pos.symbol, 0.0))
-        },
-        positions
-    ))
