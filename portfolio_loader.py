@@ -51,11 +51,7 @@ def afficher_portfolio(positions):
     afficher_positions(positions)
 
 def sauvegarder_portfolio(portfolio, nom_fichier):
-    """
-        Sauvegarde le portfolio dans un fichier JSON.
-        Le portfolio doit être une liste de dictionnaires avec les clés :
-        'symbol', 'quantity', 'price', 'purchase_date' (facultatif)
-    """
+    """ Sauvegarde le portfolio dans un fichier JSON. """
     try:
         data_to_save = { # prépare les données à sauvegarder
             "positions": portfolio
