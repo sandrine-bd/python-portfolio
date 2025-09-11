@@ -14,7 +14,7 @@ class Portfolio:
         """Vue lisible du portfolio"""
         lignes = ["--- Portfolio ---"]
         for pos in self.positions:
-            lignes.append(f"{pos.symbol:<6} | Quantité : {pos.quantity:<4} | "
+            lignes.append(f"{pos.symbol:<6} | Quantité : {pos.quantity:<8} | "
                           f"Achat : {pos.purchase_price:<8.2f} | Date : {pos.purchase_date}")
         return "\n".join(lignes)
 
