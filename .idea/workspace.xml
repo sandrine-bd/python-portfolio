@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Gestion des erreurs : portfolio_exceptions.py">
-      <change afterPath="$PROJECT_DIR$/portfolio_class.py" afterDir="false" />
+    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Classe principale avec méthodes magiques">
+      <change beforePath="$PROJECT_DIR$/portfolio_actual_prices_sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_actual_prices_sample.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio_dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_dashboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio_prices_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_prices_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio_sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_sample.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757584465402</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Classe principale avec méthodes magiques">
+      <option name="closed" value="true" />
+      <created>1757594569070</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1757594569070</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -173,6 +185,7 @@
     <MESSAGE value="Ajout fonctions optionnelles avec map()" />
     <MESSAGE value="Application fonctions map() dans dashboard" />
     <MESSAGE value="Gestion des erreurs : portfolio_exceptions.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gestion des erreurs : portfolio_exceptions.py" />
+    <MESSAGE value="Classe principale avec méthodes magiques" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classe principale avec méthodes magiques" />
   </component>
 </project>
