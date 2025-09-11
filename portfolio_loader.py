@@ -1,7 +1,7 @@
 import csv
 import json
 
-from portfolio_structures import Position, convertir_vers_positions, afficher_positions
+from portfolio_structures import convertir_vers_positions, afficher_positions
 
 def lire_portfolio_csv(nom_fichier):
     """ Charge le portfolio depuis un fichier CSV avec colonnes """
@@ -73,21 +73,3 @@ def chercher_par_symbole(portfolio, symbole):
         if position.symbol.upper() == symbole:
             return position
     return None
-
-# Exemples d'utilisation
-if __name__ == "__main__":
-    portfolio_csv = lire_portfolio_csv('portfolio_sample.csv')
-    print("\nPortfolio chargé depuis CSV :")
-    afficher_portfolio(portfolio_csv)
-
-    portfolio_json = lire_portfolio_json('portfolio_sample.json')
-    print("\nPortfolio chargé depuis JSON :")
-    afficher_portfolio(portfolio_json)
-
-    sauvegarder_portfolio(portfolio_json, 'portfolio_updated.json')
-
-    position = chercher_par_symbole(portfolio_json, "AAPL")
-    if position:
-        print("\nPosition trouvée :", position)
-    else:
-        print("\nSymbole non trouvé dans le portfolio.")
