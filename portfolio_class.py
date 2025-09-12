@@ -1,5 +1,6 @@
 from portfolio_calculs import valeur_position, valeur_actuelle, gain_absolu, rendement_pourcent, poids_portfolio, \
     dividendes_annuels, frais_courtage
+from portfolio_decorators import chronometre, logger_portfolio, cache_prix
 
 class Portfolio:
     """Classe principale pour encapsuler les opérations sur un portfolio d'actions"""
@@ -50,6 +51,16 @@ class Portfolio:
             raise TypeError("On ne peut additionner qu'avec un autre Portfolio")
         return Portfolio(self.positions + other.positions)
 
+    def obtenir_position(self, symbol):
+        """Recherche une position par symbole"""
+        symbol = symbol.upper()
+        for pos in self.positions:
+            if pos.symbol.upper() == symbol:
+                return pos
+        return None
+
+    @logger_portfolio
+    @chronometre
     def calculer_valeur_totale(self, prix_actuels=None):
         """Si prix_actuels=None : valeur d'achat initiale, sinon : valeur de marché actuelle"""
         if prix_actuels is None:
@@ -59,14 +70,8 @@ class Portfolio:
                 map(lambda pos: valeur_actuelle(pos, prix_actuels.get(pos.symbol, 0)), self.positions)
             )
 
-    def obtenir_position(self, symbol):
-        """Recherche une position par symbole"""
-        symbol = symbol.upper()
-        for pos in self.positions:
-            if pos.symbol.upper() == symbol:
-                return pos
-        return None
-
+    @cache_prix
+    @logger_portfolio
     def calculer_performance(self, prix_actuels, dividendes=None):
         """Performance du portfolio : valeur initiale, valeur actuelle, gain, rendement, poids, dividende & frais"""
         rapport = []
@@ -97,12 +102,12 @@ class Portfolio:
                 "frais_courtage": frais
             })
 
-            performance_globale = {
-                "total_initial": total_initial,
-                "total_actuel": total_actuel,
-                "gain_total": total_actuel - total_initial,
-                "rendement_portfolio_%": ((total_actuel - total_initial) / total_initial * 100)
-                if total_initial > 0 else 0
-            }
+        performance_globale = {
+            "total_initial": total_initial,
+            "total_actuel": total_actuel,
+            "gain_total": total_actuel - total_initial,
+            "rendement_portfolio_%": ((total_actuel - total_initial) / total_initial * 100)
+            if total_initial > 0 else 0
+        }
 
-            return rapport, performance_globale
+        return rapport, performance_globale

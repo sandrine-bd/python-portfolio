@@ -1,5 +1,4 @@
-from portfolio_loader import lire_portfolio_csv, chercher_par_symbole
-from portfolio_map import positions_gagnates
+from portfolio_loader import lire_portfolio_csv
 from portfolio_prices_loader import lire_prix_actuels_csv
 from portfolio_class import Portfolio
 
@@ -44,6 +43,10 @@ def main():
         f"Gain total : {perf_globale['gain_total']:+.2f} €\n"
         f"Rendement global : {perf_globale['rendement_portfolio_%']:+.2f}%"
     )
+
+    print("=== DEBUG ===")
+    print("Prix actuels :", prix_actuels)
+    print("Portfolio :", portfolio.positions)
 
     # __getitem__
     portfolio[0]
