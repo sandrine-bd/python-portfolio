@@ -8,7 +8,7 @@ def lire_prix_actuels_csv(nom_fichier):
             for ligne in lecteur:
                 try:
                     symbol = ligne["symbol"].strip().upper()
-                    prix_actuel = float(ligne["current_price"])
+                    prix_actuel = float(ligne["purchase_price"])
                     current_prices[symbol] = prix_actuel
                 except (KeyError, ValueError) as e:
                     print(f"Erreur de parsing ligne {ligne} : {e}")

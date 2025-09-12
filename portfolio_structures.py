@@ -45,7 +45,7 @@ class Portfolio:
 
     def ajouter_positions(self, position):
         if isinstance(position, Position):
-            self.positions.append(Position)
+            self.positions.append(position)
         else:
             raise TypeError("Seules des instances de Position peuvent être ajoutées")
 

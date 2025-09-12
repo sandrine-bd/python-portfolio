@@ -3,10 +3,11 @@ from portfolio_prices_loader import lire_prix_actuels_csv
 from portfolio_class import Portfolio
 
 def main():
+    print("=== DEBUT DU PROGRAMME ===\n")
+
     # Charge le portfolio initial
     portfolio_csv = lire_portfolio_csv("portfolio_sample.csv")
     portfolio = Portfolio(portfolio_csv)
-    print("\nPortfolio chargé depuis CSV :")
     print(portfolio) # __str__ est appelé
 
     print(f"\nNombre de positions : {len(portfolio)}\n") # __len__ est appelé
@@ -27,7 +28,7 @@ def main():
     # Performance globale
     rapport, perf_globale = portfolio.calculer_performance(prix_actuels, dividendes)
 
-    print(f"--- Rapport détaillé ---")
+    print(f"\n--- Rapport détaillé ---")
     for r in rapport:
         print(
             f"{r['symbole']:<6} | Init : {r['valeur_initiale']:>8.2f} | "
@@ -44,21 +45,24 @@ def main():
         f"Rendement global : {perf_globale['rendement_portfolio_%']:+.2f}%"
     )
 
-    print("=== DEBUG ===")
-    print("Prix actuels :", prix_actuels)
-    print("Portfolio :", portfolio.positions)
-
+    print("\n=== Test des méthodes spéciales ===")
     # __getitem__
-    portfolio[0]
-    portfolio["AAPL"]
+    print("Recherche index 1 : ", end="")
+    print(portfolio[1])
+    print("Recherche mot 'AAPL' : ", end="")
+    print(portfolio["AAPL"])
 
     # __iter__
+    print("\nItération dans le portfolio avec symbole et quantité : ")
     for pos in portfolio:
         print(pos.symbol, pos.quantity)
 
     # __contains__
+    print("\nRecherche du symbole TSLA", end=" : ")
     if "TSLA" in portfolio:
         print("Tesla est dans le portfolio")
+
+    print("\n=== FIN DU PROGRAMME ===")
 
 if __name__ == "__main__":
     main()

@@ -70,7 +70,6 @@ class Portfolio:
                 map(lambda pos: valeur_actuelle(pos, prix_actuels.get(pos.symbol, 0)), self.positions)
             )
 
-    @cache_prix
     @logger_portfolio
     def calculer_performance(self, prix_actuels, dividendes=None):
         """Performance du portfolio : valeur initiale, valeur actuelle, gain, rendement, poids, dividende & frais"""

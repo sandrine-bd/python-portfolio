@@ -41,7 +41,7 @@ def cache_prix(func):
 
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
-        key = (args[1:], frozenset(kwargs.items())) # clé unique pour identifier un appel de fonction ; frozenset rend les args immuables
+        key = (args[1:], kwargs.items()) # clé unique pour identifier un appel de fonction ; frozenset rend les args immuables
         if key in cache:
             print(f"[Cache] Résultat trouvé pour {func.__name__} avec {key}") # évite de recalculer si la clé existe déjà
             return cache[key]
