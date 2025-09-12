@@ -2,7 +2,6 @@ import re
 
 from portfolio_structures import Position
 
-
 def valider_symbole_action(symbole):
     if not isinstance(symbole, str):
         return False
@@ -87,7 +86,7 @@ def valider_portfolio_complet(positions):
 
 def afficher_rapport_validation(rapport):
     """Args: rapport (dict): Rapport généré par valider_portfolio_complet()"""
-    print("\n" + "=" * 50)
+    print("=" * 50)
     print("           RAPPORT DE VALIDATION")
     print("=" * 50)
 

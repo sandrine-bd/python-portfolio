@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Validation regex">
+    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Enrichissement des validations">
+      <change beforePath="$PROJECT_DIR$/portfolio.log" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio_dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_dashboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_validation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +70,7 @@
       <recent name="$PROJECT_DIR$/.venv" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.portfolio_validation">
+  <component name="RunManager" selected="Python.portfolio_dashboard">
     <configuration name="portfolio_dashboard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Portfolio" />
       <option name="ENV_FILES" value="" />
@@ -137,8 +139,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.portfolio_validation" />
         <item itemvalue="Python.portfolio_dashboard" />
+        <item itemvalue="Python.portfolio_validation" />
         <item itemvalue="Python.portfolio_decorators" />
       </list>
     </recent_temporary>
@@ -302,7 +304,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757671014252</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Enrichissement des validations">
+      <option name="closed" value="true" />
+      <created>1757671565674</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1757671565674</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -333,6 +343,7 @@
     <MESSAGE value="Débug" />
     <MESSAGE value="Vadidation regex" />
     <MESSAGE value="Validation regex" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validation regex" />
+    <MESSAGE value="Enrichissement des validations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enrichissement des validations" />
   </component>
 </project>
