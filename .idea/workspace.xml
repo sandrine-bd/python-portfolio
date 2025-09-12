@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Classe principale avec méthodes magiques">
-      <change beforePath="$PROJECT_DIR$/portfolio_actual_prices_sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_actual_prices_sample.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio_dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_dashboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio_prices_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_prices_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio_sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_sample.csv" afterDir="false" />
+    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Adaptation dashboard à la classe Portfolio avec ses méthodes magiques">
+      <change afterPath="$PROJECT_DIR$/portfolio_decorators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,20 +46,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.portfolio_class.executor": "Run",
-    "Python.portfolio_dashboard.executor": "Run",
-    "Python.portfolio_exceptions.executor": "Run",
-    "Python.portfolio_loader.executor": "Run",
-    "Python.portfolio_structures.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.portfolio_class.executor&quot;: &quot;Run&quot;,
+    &quot;Python.portfolio_dashboard.executor&quot;: &quot;Run&quot;,
+    &quot;Python.portfolio_exceptions.executor&quot;: &quot;Run&quot;,
+    &quot;Python.portfolio_loader.executor&quot;: &quot;Run&quot;,
+    &quot;Python.portfolio_structures.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -172,7 +169,23 @@
       <option name="project" value="LOCAL" />
       <updated>1757594569070</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Adaptation dashboard à la classe Portfolio avec ses méthodes magiques">
+      <option name="closed" value="true" />
+      <created>1757599452055</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1757599452055</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Adaptation dashboard à la classe Portfolio avec ses méthodes magiques">
+      <option name="closed" value="true" />
+      <created>1757599456888</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1757599456888</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -186,6 +199,7 @@
     <MESSAGE value="Application fonctions map() dans dashboard" />
     <MESSAGE value="Gestion des erreurs : portfolio_exceptions.py" />
     <MESSAGE value="Classe principale avec méthodes magiques" />
-    <option name="LAST_COMMIT_MESSAGE" value="Classe principale avec méthodes magiques" />
+    <MESSAGE value="Adaptation dashboard à la classe Portfolio avec ses méthodes magiques" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adaptation dashboard à la classe Portfolio avec ses méthodes magiques" />
   </component>
 </project>
