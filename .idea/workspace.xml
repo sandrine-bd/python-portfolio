@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Ajout décorateurs au dashboard">
+    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Débug">
+      <change afterPath="$PROJECT_DIR$/portfolio_validation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio.log" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio_actual_prices_sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_actual_prices_sample.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio_dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_dashboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio_decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio_prices_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_prices_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio_sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_sample.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio_structures.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_structures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio_exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_exceptions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +59,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/user/Documents/Python/Bottle - ToDoList"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -261,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757663418289</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Débug">
+      <option name="closed" value="true" />
+      <created>1757665549169</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1757665549169</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -289,6 +292,7 @@
     <MESSAGE value="Adaptation dashboard à la classe Portfolio avec ses méthodes magiques" />
     <MESSAGE value="Décorateurs" />
     <MESSAGE value="Ajout décorateurs au dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout décorateurs au dashboard" />
+    <MESSAGE value="Débug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Débug" />
   </component>
 </project>

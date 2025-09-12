@@ -1,7 +1,6 @@
 from portfolio_calculs import gain_absolu
 from portfolio_structures import Position
 
-
 class ErreurDonneesPortfolio(Exception):
     """Exception personnalisée pour signaler un problème dans les données du portfolio"""
     def __init__(self, message, position=None):
