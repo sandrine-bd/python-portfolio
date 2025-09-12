@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Débug">
-      <change afterPath="$PROJECT_DIR$/portfolio_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio_exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_exceptions.py" afterDir="false" />
+    <list default="true" id="9bad167b-b99c-4fa4-aea6-2a7e3d03203e" name="Changes" comment="Validation regex">
+      <change beforePath="$PROJECT_DIR$/portfolio_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio_validation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +54,7 @@
     "Python.portfolio_exceptions.executor": "Run",
     "Python.portfolio_loader.executor": "Run",
     "Python.portfolio_structures.executor": "Run",
+    "Python.portfolio_validation.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -69,7 +68,7 @@
       <recent name="$PROJECT_DIR$/.venv" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.portfolio_dashboard">
+  <component name="RunManager" selected="Python.portfolio_validation">
     <configuration name="portfolio_dashboard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Portfolio" />
       <option name="ENV_FILES" value="" />
@@ -114,8 +113,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="portfolio_validation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Portfolio" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/portfolio_validation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.portfolio_validation" />
         <item itemvalue="Python.portfolio_dashboard" />
         <item itemvalue="Python.portfolio_decorators" />
       </list>
@@ -264,7 +286,23 @@
       <option name="project" value="LOCAL" />
       <updated>1757665549169</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Vadidation regex">
+      <option name="closed" value="true" />
+      <created>1757670833172</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1757670833172</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Validation regex">
+      <option name="closed" value="true" />
+      <created>1757671014252</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1757671014252</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -293,6 +331,8 @@
     <MESSAGE value="Décorateurs" />
     <MESSAGE value="Ajout décorateurs au dashboard" />
     <MESSAGE value="Débug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Débug" />
+    <MESSAGE value="Vadidation regex" />
+    <MESSAGE value="Validation regex" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validation regex" />
   </component>
 </project>
